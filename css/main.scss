@@ -1,5 +1,234 @@
-// generic coding
+//color variables
 
-.sm{
-    max-width: 65rem;
+$primary-maroon: #bb2525;
+$black: #000000;
+$color-cream: #fff5e0;
+$white: #ffffff;
+
+// generic coding
+figure,h1,h2,h3,h4,h5,h6,ul,p{
+    margin: 0;
+}
+.heading_sect {
+  font-size: calc(2rem + 2vw);
+  color: $black;
+  text-transform: capitalize;
+  line-height: 1.2;
+
+  small {
+    display: block;
+  }
+}
+
+.sm {
+  max-width: 75rem;
+}
+
+// generic buttons
+
+.btn_filled {
+  background-color: $primary-maroon;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  color: white;
+  border: 1px solid transparent;
+}
+
+//styling of header section
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav {
+  position: relative;
+  padding: 2.5rem 0.5rem !important;
+
+  .navbar-brand {
+    img {
+      height: 2.5rem;
+    }
+  }
+
+  .navbar-collapse {
+    justify-content: center;
+  }
+
+  .nav-link {
+    color: rgba(0, 0, 0, 1) !important;
+    font-weight: 500;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: lighten($color: $black, $amount: 90%);
+  }
+}
+
+//stying of hero section
+
+.hero {
+  background-color: $color-cream;
+
+  .heading_sect {
+    span {
+      z-index: 1;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0.6rem;
+        left: 0;
+        z-index: -1;
+        height: 1rem;
+        width: 100%;
+        background-color: lighten($color: $primary-maroon, $amount: 20%);
+      }
+    }
+  }
+}
+
+//styling of hero_text section
+
+.hero_text {
+    position: relative;
+    width: 80%;
+  p {
+    // width: 80%;
+    background-color: $white;
+    padding: 2.5rem;
+    padding-bottom: 2rem;
+    border-radius: 2rem;
+    border-bottom-left-radius: 0;
+  }
+
+  article {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    padding-top: .5rem;
+    border-radius: 2rem;
+    border-top-left-radius: 0;
+    background-color: $white;
+    width: fit-content;
+    position: relative;
+    // transform: translateY(-1rem);
+    // z-index: 1;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, 0);
+        width: 3rem;
+        height: 1rem;
+        // border-radius: 50%;
+        background-color: $white;
+        // z-index: -1;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(2.9rem, 0);
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: $color-cream;
+        z-index: 1;
+    }
+
+
+    .happy_client-list{
+        list-style: none;
+        display: flex;
+        width: fit-content;
+        li{
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            border: 1px solid $white;
+            &:nth-child(1){
+                background-color: green;
+            }
+            &:nth-child(2){
+                background-color: blue;
+                transform: translateX(-.5rem);
+            }
+            &:nth-child(3){
+                background-color: green;
+                transform: translateX(-1rem);
+            }
+            
+        }  
+    }
+
+    h3{
+        font-size: calc(1rem + 1vw);
+        small{
+            display: block;
+            font-size: 50%;
+            color: lighten($color:$black, $amount: 60%);
+            text-transform: capitalize;
+        }
+    }
+
+    
+  }
+
+  .btn_filled{
+    position: absolute;
+    right: 0;
+    bottom: 1.3rem;
+    z-index: 1;
+}
+}
+
+@media (max-width: 992px) {
+  //styling of nav section
+
+  header {
+    background-color: $color-cream;
+    // position: relative;
+    z-index: 10;
+  }
+  nav {
+    .quote {
+      position: absolute;
+      top: 2.35rem;
+      right: 6rem;
+    }
+  }
+}
+
+
+@media (max-width: 768px){
+    //styling of hero section
+    .hero_text{
+        width: 100%;
+        margin-bottom: 5rem;
+        .btn_filled{
+            bottom: -4rem;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+
+}
+
+.bg_gray {
+  background-color: lighten($color: $black, $amount: 95%);
 }
