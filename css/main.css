@@ -390,7 +390,7 @@ body {
 
 @media (max-width: 576px) {
   .hero .hero_inner figure img {
-    width: 40% !important;
+    width: 70% !important;
   }
   .testimonial_img-main figure {
     padding-top: 105%;
