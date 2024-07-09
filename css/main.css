@@ -386,12 +386,6 @@ body {
   .hero .hero_inner figure {
     width: 100%;
   }
-  .testimonial_sect {
-    padding-bottom: 6rem;
-  }
-  .testimonial_sect .heading_sect {
-    margin-bottom: 6rem;
-  }
 }
 
 @media (max-width: 576px) {
