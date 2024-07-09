@@ -336,7 +336,7 @@ body {
 }
 
 .swiper_card article figcaption h3 {
-  font-size: calc(1rem + 0.5rem);
+  font-size: calc(1rem + 0.5vw);
 }
 
 .swiper_card article figcaption h3 small {
