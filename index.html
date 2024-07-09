@@ -1,168 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-    <link rel="stylesheet" href="./css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-
-</head>
-<body>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
     <header id="header_sect">
-
-        <div class="container sm">
-
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">
-                    <img src="./img/logo.png" alt="">
+      <div class="container sm">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container sm">
+            <a class="navbar-brand" href="#">
+              <img src="./img/logo.png" alt="" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Home
                   </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Home
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Abouit us</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Services
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Projects
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Abouit us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Services
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Projects
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
 
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Blogs
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Blogs
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
 
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Contact
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                    
-                  </div>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Contact
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
 
-                  <a href="#" class="btn btn_filled quote">Get a quote</a>
-                </div>
-              </nav>
-
-        </div><!-- /.container -->
-
+            <a href="#" class="btn btn_filled quote">Get a quote</a>
+          </div>
+        </nav>
+      </div>
+      <!-- /.container -->
     </header>
 
     <main>
       <section class="hero" id="hero_sect">
-
         <div class="container sm">
+          <div class="hero_inner d_flex-align">
+            <figcaption>
+              <div class="heading_sect">
+                <h2>
+                  it excellience for <br />
+                  your
+                  <span class="position-relative">Business.</span> transform
+                  <br />
+                  your Business with it
+                </h2>
+              </div>
+              <!-- /.heading_sect -->
 
-          <div class="hero_inner">
+              <picture>
+                <img src="./img/happy-client.png" alt="" />
+              </picture>
+            </figcaption>
 
-            <div class="row">
-              <div class="col-xl-6">
+            <figure class="d_center">
+              <img src="./img/hero-client-img.png" alt="" />
+            </figure>
+          </div>
+          <!-- /.hero_inner -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.hero -->
 
-                <div class="heading_sect">
-                  it excellience for <br> your <span class="position-relative">Business.</span> transform <br> your Business with it
-                </div><!-- /.heading_sect -->
-
-                <div class="hero_text">
-
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem tempore placeat quo blanditiis veritatis aut ipsa? Quod dolore voluptas perferendis  </p>
-
-                  <article>
-                    <ul class="happy_client-list">
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
-
-                    <h3>2,000+
-                      <small>
-                        happy clients
-                      </small>
-                    </h3>
-
-                    
-                  </article>
-
-                  <a href="#" class="btn btn_filled">contact-us</a>
-
-                </div><!-- /.header_text -->
-
-
-
-              </div><!-- /.col -->
-
-              <div class="col-xl-6">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nostrum saepe est exercitationem eligendi ducimus expedita dignissimos quisquam, officia cupiditate consequuntur, eaque at iusto consequatur, voluptates quae eveniet! Ea dicta dolorum quisquam eligendi, architecto corporis, itaque numquam cum facilis vitae nostrum enim consequuntur, iste earum ipsam sed optio. Voluptates mollitia ex esse facilis. Placeat cumque harum itaque! Mollitia quod earum obcaecati, neque error, porro quibusdam autem nam est harum ipsam expedita alias tenetur tempore! Temporibus at inventore laudantium ipsa ad harum, provident libero porro eligendi id debitis nemo, culpa minima a non deleniti reprehenderit cumque hic ipsam deserunt? Non ratione adipisci vitae corporis vel esse dolores delectus fugiat cumque autem accusantium optio, cupiditate explicabo quos. Doloribus cum delectus, tenetur cumque sint ipsam. Deleniti, nemo voluptatem libero ipsum blanditiis maiores porro laboriosam est explicabo culpa aperiam ex non laborum expedita enim eveniet, hic veniam quae sapiente accusamus vero? Autem ratione, dolorum explicabo fugit alias blanditiis rem temporibus, adipisci commodi dolor rerum sequi non at perspiciatis. Deserunt ullam ex voluptas, laborum adipisci assumenda maiores repellendus totam nisi minus in, necessitatibus asperiores expedita ipsam similique hic ad tempore odit enim ratione? Et quis quidem nobis autem neque quasi, doloribus accusamus ullam reprehenderit animi.</p>
-              </div><!-- /.col -->
+      <section class="info seec_space">
+        <div class="container sm">
+          <div class="info_inner">
+            <div class="heading_sect">
+              <h2>
+                <small>how we are</small>
+                businesses through <br />the
+                <span class="position-relative">Technology.</span>
+              </h2>
             </div>
+            <!-- /.heading_sect -->
+          </div>
+          <!-- /.info_inner -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.info -->
 
-          </div><!-- /.hero_inner -->
+      <section class="testimonial_sect seec_space">
+        <div class="container sm">
+          <div class="heading_sect">
+            <h2>
+              <small>how we are</small>
+              businesses through <br />the
+              <span class="position-relative">Technology.</span>
+            </h2>
+          </div>
+          <!-- /.heading_sect -->
+          <div class="testimonial_inner ps_r">
+            
 
-        </div><!-- /.container -->
+            <div class="testimonial_slider ps_r">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="swiper_card">
+                      <article>
+                        <figure>
+                          <img
+                            loading="lazy"
+                            src="./img/client-a-o.png"
+                            alt=""
+                          />
+                        </figure>
+                        <figcaption>
+                          <h3>
+                            Lorem, ipsum dolor.
+                            <small>Lorem, ipsum.</small>
+                          </h3>
+                        </figcaption>
+                      </article>
 
-      </section><!-- /.hero -->
+                      <ul class="testimonial_star-ul d_flex-align">
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_gray">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                      </ul>
+
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Commodi iure, repellat optio id doloremque cum minima
+                        molestiae voluptates officiis ipsum.
+                      </p>
+                    </div>
+                    <!-- /.swiper_card -->
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper_card">
+                      <article>
+                        <figure>
+                          <img
+                            loading="lazy"
+                            src="./img/client-a-o.png"
+                            alt=""
+                          />
+                        </figure>
+                        <figcaption>
+                          <h3>
+                            Lorem, ipsum dolor.
+                            <small>Lorem, ipsum.</small>
+                          </h3>
+                        </figcaption>
+                      </article>
+
+                      <ul class="testimonial_star-ul d_flex-align">
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_gray">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                      </ul>
+
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Commodi iure, repellat optio id doloremque cum minima
+                        molestiae voluptates officiis ipsum.
+                      </p>
+                    </div>
+                    <!-- /.swiper_card -->
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper_card">
+                      <article>
+                        <figure>
+                          <img
+                            loading="lazy"
+                            src="./img/client-a-o.png"
+                            alt=""
+                          />
+                        </figure>
+                        <figcaption>
+                          <h3>
+                            Lorem, ipsum dolor.
+                            <small>Lorem, ipsum.</small>
+                          </h3>
+                        </figcaption>
+                      </article>
+
+                      <ul class="testimonial_star-ul d_flex-align">
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_gray">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                      </ul>
+
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Commodi iure, repellat optio id doloremque cum minima
+                        molestiae voluptates officiis ipsum.
+                      </p>
+                    </div>
+                    <!-- /.swiper_card -->
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper_card">
+                      <article>
+                        <figure>
+                          <img
+                            loading="lazy"
+                            src="./img/client-a-o.png"
+                            alt=""
+                          />
+                        </figure>
+                        <figcaption>
+                          <h3>
+                            Lorem, ipsum dolor.
+                            <small>Lorem, ipsum.</small>
+                          </h3>
+                        </figcaption>
+                      </article>
+
+                      <ul class="testimonial_star-ul d_flex-align">
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_gray">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                      </ul>
+
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Commodi iure, repellat optio id doloremque cum minima
+                        molestiae voluptates officiis ipsum.
+                      </p>
+                    </div>
+                    <!-- /.swiper_card -->
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper_card">
+                      <article>
+                        <figure>
+                          <img
+                            loading="lazy"
+                            src="./img/client-a-o.png"
+                            alt=""
+                          />
+                        </figure>
+                        <figcaption>
+                          <h3>
+                            Lorem, ipsum dolor.
+                            <small>Lorem, ipsum.</small>
+                          </h3>
+                        </figcaption>
+                      </article>
+
+                      <ul class="testimonial_star-ul d_flex-align">
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_gray">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                      </ul>
+
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Commodi iure, repellat optio id doloremque cum minima
+                        molestiae voluptates officiis ipsum.
+                      </p>
+                    </div>
+                    <!-- /.swiper_card -->
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper_card">
+                      <article>
+                        <figure>
+                          <img
+                            loading="lazy"
+                            src="./img/client-a-o.png"
+                            alt=""
+                          />
+                        </figure>
+                        <figcaption>
+                          <h3>
+                            Lorem, ipsum dolor.
+                            <small>Lorem, ipsum.</small>
+                          </h3>
+                        </figcaption>
+                      </article>
+
+                      <ul class="testimonial_star-ul d_flex-align">
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_gray">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                      </ul>
+
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Commodi iure, repellat optio id doloremque cum minima
+                        molestiae voluptates officiis ipsum.
+                      </p>
+                    </div>
+                    <!-- /.swiper_card -->
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper_card">
+                      <article>
+                        <figure>
+                          <img
+                            loading="lazy"
+                            src="./img/client-a-o.png"
+                            alt=""
+                          />
+                        </figure>
+                        <figcaption>
+                          <h3>
+                            Lorem, ipsum dolor.
+                            <small>Lorem, ipsum.</small>
+                          </h3>
+                        </figcaption>
+                      </article>
+
+                      <ul class="testimonial_star-ul d_flex-align">
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_yellow">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                        <li class="color_gray">
+                          <i class="bi bi-star-fill"></i>
+                        </li>
+                      </ul>
+
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Commodi iure, repellat optio id doloremque cum minima
+                        molestiae voluptates officiis ipsum.
+                      </p>
+                    </div>
+                    <!-- /.swiper_card -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial_slider-btns">
+                <div class="swiper-button-next">
+                  <i class="bi bi-arrow-right-short"></i>
+                </div>
+                <div class="swiper-button-prev">
+                  <i class="bi bi-arrow-left-short"></i>
+                </div>
+              </div>
+              <!-- /.testimonial_slider-btns -->
+            </div>
+            <!-- /.testimonial_slider -->
+
+            <div class="container_partial-right">
+              <figure>
+                <img
+                  loading="lazy"
+                  src="./img/testimonial-img-main.jpg"
+                  alt=""
+                />
+              </figure>
+            </div>
+            <!-- /.container_partial-right -->
+          </div>
+          <!-- /.testimonial_inner -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.testimonial_sect -->
     </main>
 
-    <footer>
+    <footer></footer>
 
-    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
-
-
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="./js/main.js"></script>
-</body>
+  </body>
 </html>
