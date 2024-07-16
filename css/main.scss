@@ -1,7 +1,7 @@
-$swiper_slide-width: 400px;
+$swiper_slide-width: 700px;
 
 :root {
-  --swiper-slide-width: 400px;
+  --swiper-slide-width: 500px;
 }
 
 //color variables
@@ -368,7 +368,13 @@ body {
       gap: 1.5rem;
 
       h3 {
-        font-size: calc(0.7rem + 1vw);
+        // font-size: calc(0.7rem + 1vw);
+        font-size: clamp(0, calc(1rem + .2vw), calc(1rem + .4vw));
+        small{
+          display: block;
+          font-size: 60%;
+        }
+
       }
 
       figure {

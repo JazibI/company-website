@@ -1,5 +1,5 @@
 :root {
-  --swiper-slide-width: 400px;
+  --swiper-slide-width: 500px;
 }
 
 .d_flex {
@@ -372,7 +372,12 @@ body {
 }
 
 .testimonial_slider-sect .swiper_card article h3 {
-  font-size: calc(0.7rem + 1vw);
+  font-size: clamp(0, calc(1rem + .2vw), calc(1rem + .4vw));
+}
+
+.testimonial_slider-sect .swiper_card article h3 small {
+  display: block;
+  font-size: 60%;
 }
 
 .testimonial_slider-sect .swiper_card article figure img {
