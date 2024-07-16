@@ -235,12 +235,101 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    figure {
+    .info_img-sect {
       flex: 50%;
       max-width: 50%;
+
+      figure{
+        padding-top: 70%;
+        width: 60%;
+        position: relative;
+
+        &:before,&:after{
+          content: '';
+          position: absolute;
+          border-radius: 2rem;
+          bottom: 0;
+          left: 0;
+        }
+
+
+        &:before{
+          width: 120%;
+          height: 80%;
+          background-color: $primary-maroon;
+        }
+
+        &:after{
+          width: 130%;
+          height: 70%;
+          background-color: $color-blue;
+          border: 1px solid $primary-maroon;
+          transform: skew(-20deg);
+          left: 3rem;
+          
+          
+        }
+
+        img{
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 2rem;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top center;
+        }
+
+        figcaption{
+          position: absolute;
+          top: 70%;
+          left: 80%;
+          padding: 1rem 1.7rem;
+          border: 2px solid $primary-maroon;
+          background-color: $color-blue;
+          display: flex;
+          border-radius: 1rem;
+          gap: 2rem;
+          align-items: center;
+          z-index: 1;
+
+          picture{
+            display: block;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            border: 5px solid $white;
+            position: relative;
+
+            img{
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              top: 0;
+              left: 0;
+            }
+          }
+
+          h2{
+            color: $white;
+            font-size: clamp(0, calc(.8rem + .2rem) calc(1rem + .2vw));
+            small{
+              display: block;
+              font-size: 40%;
+              white-space: nowrap;
+            }
+          }
+        }
+
+      }
+      
+
+      
     }
 
-    figcaption {
+    .info_content-sect {
       position: relative;
       flex: 1;
       display: block;
@@ -464,13 +553,13 @@ body {
   .info_content {
 
     
-    figure {
+    .info_img-sect {
       flex: 100%;
       max-width: 100%;
       margin-bottom: 1rem;
     }
 
-    figcaption{
+    .info_content-sect{
       flex: 100%;
       max-width: 100%;
       padding: 1.5rem;
@@ -526,6 +615,13 @@ body {
       }
     }
   }
+
+  .info{
+    .info_img-sect figure figcaption{
+      left: 55%!important;
+      top: 65%!important;
+    }
+  } 
 }
 
 @media (max-width: 576px) {

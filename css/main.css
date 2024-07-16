@@ -231,14 +231,105 @@ body {
           align-items: flex-end;
 }
 
-.info .info_content figure {
+.info .info_content .info_img-sect {
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
   max-width: 50%;
 }
 
-.info .info_content figcaption {
+.info .info_content .info_img-sect figure {
+  padding-top: 70%;
+  width: 60%;
+  position: relative;
+}
+
+.info .info_content .info_img-sect figure:before, .info .info_content .info_img-sect figure:after {
+  content: '';
+  position: absolute;
+  border-radius: 2rem;
+  bottom: 0;
+  left: 0;
+}
+
+.info .info_content .info_img-sect figure:before {
+  width: 120%;
+  height: 80%;
+  background-color: #bb2525;
+}
+
+.info .info_content .info_img-sect figure:after {
+  width: 130%;
+  height: 70%;
+  background-color: #141e46;
+  border: 1px solid #bb2525;
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+  left: 3rem;
+}
+
+.info .info_content .info_img-sect figure img {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 2rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+
+.info .info_content .info_img-sect figure figcaption {
+  position: absolute;
+  top: 70%;
+  left: 80%;
+  padding: 1rem 1.7rem;
+  border: 2px solid #bb2525;
+  background-color: #141e46;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 1rem;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.info .info_content .info_img-sect figure figcaption picture {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  position: relative;
+}
+
+.info .info_content .info_img-sect figure figcaption picture img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.info .info_content .info_img-sect figure figcaption h2 {
+  color: #ffffff;
+  font-size: clamp(0, calc(.8rem + .2rem) calc(1rem + .2vw));
+}
+
+.info .info_content .info_img-sect figure figcaption h2 small {
+  display: block;
+  font-size: 40%;
+  white-space: nowrap;
+}
+
+.info .info_content .info_content-sect {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -250,7 +341,7 @@ body {
   position: relative;
 }
 
-.info .info_content figcaption .info_line {
+.info .info_content .info_content-sect .info_line {
   position: absolute;
   height: 100%;
   width: 2px;
@@ -259,7 +350,7 @@ body {
   left: calc(.5rem + 3vw);
 }
 
-.info .info_content figcaption .info_line:before, .info .info_content figcaption .info_line:after {
+.info .info_content .info_content-sect .info_line:before, .info .info_content .info_content-sect .info_line:after {
   content: '';
   position: absolute;
   left: 50%;
@@ -271,15 +362,15 @@ body {
   background-color: gray;
 }
 
-.info .info_content figcaption .info_line:before {
+.info .info_content .info_content-sect .info_line:before {
   top: 0;
 }
 
-.info .info_content figcaption .info_line:after {
+.info .info_content .info_content-sect .info_line:after {
   bottom: 0;
 }
 
-.info .info_content figcaption p {
+.info .info_content .info_content-sect p {
   color: #ffffff;
   margin-bottom: 1rem;
 }
@@ -455,21 +546,21 @@ body {
     top: 2.35rem;
     right: 6rem;
   }
-  .info .info_content figure {
+  .info .info_content .info_img-sect {
     -webkit-box-flex: 100%;
         -ms-flex: 100%;
             flex: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
   }
-  .info .info_content figcaption {
+  .info .info_content .info_content-sect {
     -webkit-box-flex: 100%;
         -ms-flex: 100%;
             flex: 100%;
     max-width: 100%;
     padding: 1.5rem;
   }
-  .info .info_content figcaption .info_line {
+  .info .info_content .info_content-sect .info_line {
     left: .5rem;
   }
   .testimonial_img-main figure {
@@ -500,6 +591,10 @@ body {
   }
   .hero .hero_inner figure {
     width: 100%;
+  }
+  .info .info_img-sect figure figcaption {
+    left: 55% !important;
+    top: 65% !important;
   }
 }
 
