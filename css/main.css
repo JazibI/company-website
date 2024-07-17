@@ -537,22 +537,26 @@ body {
 }
 
 .our_services .heading_sect h2 {
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
-  max-width: 50%;
+  -webkit-box-flex: 65%;
+      -ms-flex: 65%;
+          flex: 65%;
+  max-width: 65%;
   color: #141e46;
 }
 
 .our_services .heading_sect p {
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
-  max-width: 50%;
+  -webkit-box-flex: 35%;
+      -ms-flex: 35%;
+          flex: 35%;
+  max-width: 35%;
   padding-left: 3rem;
 }
 
 .our_services .row [class^="col-"] {
+  padding: 12px;
+}
+
+.our_services .award_winning-cards [class^="col-"] {
   padding: 12px;
 }
 
@@ -615,6 +619,148 @@ body {
   color: #bb2525;
 }
 
+.award_winning-card {
+  position: relative;
+  background-color: #bb2525;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.award_winning-card h2 {
+  font-size: calc(2.5rem + 1vw);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+.award_winning-card h2 small {
+  margin-top: .5rem;
+  display: block;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke: 0;
+  font-size: 25%;
+  text-transform: capitalize;
+}
+
+.award_winning-card .award_card-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  background-color: #e57b7b;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.our_works .heading_sect {
+  text-align: center;
+}
+
+.our_works .heading_sect h2 {
+  color: #141e46;
+}
+
+.our_works .heading_sect h2 small {
+  color: #ff6969;
+}
+
+.our_works .our_work-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.our_works .our_work-card figcaption, .our_works .our_work-card figure {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  max-width: 50%;
+}
+
+.our_works .our_work-card figcaption {
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.our_works .our_work-card figcaption h2 {
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+}
+
+.our_works .our_work-card figcaption h2 span {
+  color: #ff6969;
+}
+
+.our_works .our_work-card figcaption p {
+  margin-bottom: 1.5rem;
+}
+
+.our_works .our_work-card figcaption .btn {
+  padding-left: 0;
+  color: #000000;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: calc(.5rem + .3vw);
+}
+
+.our_works .our_work-card figure {
+  position: relative;
+}
+
+.our_works .our_work-card figure:after {
+  content: '01';
+  color: #ffffff;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+  background-color: #bb2525;
+}
+
+.our_works .our_work-card figure img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #eaeaea;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.our_works .our_work-card:nth-child(3) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.our_works .our_work-card:nth-child(3) figure::after {
+  left: auto;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
 @media (max-width: 992px) {
   header {
     background-color: #fff5e0;
@@ -665,6 +811,19 @@ body {
     max-width: 100%;
     padding-left: 0;
     margin-bottom: 2rem;
+  }
+  .our_works .our_work-card figcaption, .our_works .our_work-card figure {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    max-width: 100%;
+  }
+  .our_works .our_work-card figure {
+    padding-top: 30%;
+  }
+  .our_works .our_work-card figure::after {
+    -webkit-transform: translate(0, -50%) !important;
+            transform: translate(0, -50%) !important;
   }
 }
 
@@ -730,6 +889,15 @@ body {
   .testimonial_slider-sect .testmonial_slider-btns .swiper-button-prev i {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
+  }
+  .award_winning-card h2 {
+    font-size: calc(3rem + 2vw);
+  }
+  .our_works .our_work-card .btn {
+    font-size: calc(1rem + 1vw) !important;
+  }
+  .our_works .our_work-card figure {
+    padding-top: 50%;
   }
 }
 

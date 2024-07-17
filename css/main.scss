@@ -528,19 +528,23 @@ body {
 .our_services {
   .heading_sect {
     h2 {
-      flex: 50%;
-      max-width: 50%;
+      flex: 65%;
+      max-width: 65%;
       color: $color-blue;
     }
 
     p {
-      flex: 50%;
-      max-width: 50%;
+      flex: 35%;
+      max-width: 35%;
       padding-left: 3rem;
     }
   }
 
   .row [class^="col-"] {
+    padding: 12px;
+  }
+
+  .award_winning-cards [class^="col-"] {
     padding: 12px;
   }
 }
@@ -609,6 +613,151 @@ body {
       color: $primary-maroon;
     }
   }
+}
+
+.award_winning-card{
+  position: relative;
+  background-color: $primary-maroon;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+
+  h2{
+    font-size: calc(2.5rem + 1vw);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px $white;
+
+    small{
+      margin-top: .5rem;
+      display: block;
+      -webkit-text-fill-color: $white;
+      -webkit-text-stroke: 0;
+      font-size: 25%;
+      text-transform: capitalize;
+    }
+  }
+
+
+  .award_card-icon{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    background-color: lighten($color: $primary-maroon, $amount: 25%);
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: $white;
+  }
+}
+
+//styling of our work section
+
+.our_works{
+  .heading_sect{
+    text-align: center;
+    h2{
+      color: $color-blue;
+      small{
+        color: $color-pink;
+      }
+    }
+  }
+
+
+  .our_work-card{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+
+    
+    figcaption,figure{
+      flex: 50%;
+      max-width: 50%;
+
+    }
+
+    figcaption{
+      padding: 1rem;
+      background-color: $white;
+
+      h2{
+        margin-bottom: 1.5rem;
+        text-transform: capitalize;
+        span{
+          color: $color-pink;
+        }
+      }
+
+      p{
+        margin-bottom: 1.5rem;
+      }
+      .btn{
+        padding-left: 0;
+        color: $black;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: calc(.5rem + .3vw);
+      }
+
+    }
+
+    figure{
+      position: relative;
+
+      &:after{
+        content: '01';
+        color: $white;
+        text-align: center;
+        line-height: 5rem;
+        font-size: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        width: 5rem;
+        height: 5rem;
+        background-color: $primary-maroon;
+      }
+
+      img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        background-color: #eaeaea;
+        object-position: center center;
+      }
+    }
+
+
+  }
+
+  .our_work-card {
+    &:nth-child(3) {
+      flex-direction: row-reverse;
+
+      figure{
+        &::after{
+          left: auto;
+          right: 0;
+          transform: translate(50%, -50%);
+        }
+      }
+    }
+  }
+
+  // .our_work-card:nth-child(2){
+  //   flex-direction: row-reverse;
+  // }
 }
 
 @media (max-width: 992px) {
@@ -682,6 +831,23 @@ body {
       }
     }
   }
+
+  //styling of our work sect
+
+  .our_works .our_work-card{
+
+    figcaption,figure{
+      flex: 100%;
+      max-width: 100%;
+    }
+    figure{
+      &::after{
+        transform: translate(0, -50%)!important;
+      }
+      padding-top: 30%;
+    }
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -771,6 +937,31 @@ body {
       }
     }
   }
+
+  //styling of our services sect
+
+  .award_winning-card{
+    h2{
+      font-size: calc(3rem + 2vw);
+    }
+  }
+
+  //styling of our work sect
+
+  .our_works .our_work-card{
+
+    .btn{
+      font-size: calc(1rem + 1vw)!important;
+    }
+    
+    figure{
+
+      padding-top: 50%;
+    }
+  }
+
+
+
 }
 
 //  .testimonial_slider-sect
