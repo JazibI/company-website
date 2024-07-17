@@ -265,7 +265,7 @@ body {
   border: 1px solid #bb2525;
   -webkit-transform: skew(-20deg);
           transform: skew(-20deg);
-  left: 3rem;
+  left: 1.8rem;
 }
 
 .info .info_content .info_img-sect figure img {
