@@ -1061,6 +1061,9 @@ body {
 }
 
 @media (max-width: 576px) {
+  .heading_sect h2 small {
+    font-size: 55%;
+  }
   .hero .hero_inner figure img {
     width: 70% !important;
   }
@@ -1110,13 +1113,25 @@ body {
     padding-top: 50%;
   }
   .img_sect:after {
-    -webkit-transform: translateX(-3rem) !important;
-            transform: translateX(-3rem) !important;
-    height: 5rem !important;
+    -webkit-transform: translateX(-2rem) !important;
+            transform: translateX(-2rem) !important;
+    height: 7rem !important;
   }
   .img_sect .about_us-b {
     -webkit-transform: translateY(1rem) !important;
             transform: translateY(1rem) !important;
+  }
+  .about_us-a {
+    padding-top: 90% !important;
+  }
+  .about_us-b {
+    padding-top: 50% !important;
+  }
+  .about_client-info {
+    padding: 0.5rem 1rem !important;
+  }
+  .about_client-info h3 {
+    margin-left: -1.5rem;
   }
 }
 

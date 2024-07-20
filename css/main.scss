@@ -1143,6 +1143,21 @@ body {
 }
 
 @media (max-width: 576px) {
+
+  //styling of heading_sect
+
+  .heading_sect {
+    h2 {
+      
+  
+      small {
+        font-size: 55%;
+      }
+  
+    }
+  }
+
+
   .hero {
     .hero_inner {
       figure {
@@ -1221,12 +1236,28 @@ body {
 
   .img_sect{
     &:after{
-      transform: translateX(-3rem)!important;
-      height: 5rem!important;
+      transform: translateX(-2rem)!important;
+      height: 7rem!important;
     }
 
     .about_us-b{
       transform: translateY(1rem)!important;
+    }
+  }
+
+  .about_us-a{
+    padding-top: 90%!important;
+
+  }
+  .about_us-b{
+    padding-top: 50%!important;
+
+  }
+
+  .about_client-info{
+    padding: .5rem 1rem!important;
+    h3{
+      margin-left: -1.5rem;
     }
   }
 
