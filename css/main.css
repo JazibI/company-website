@@ -88,6 +88,30 @@ ul {
   color: #ff6969;
 }
 
+.heading_blue h2 {
+  color: #141e46;
+}
+
+.heading_blue-pink h2 {
+  color: #141e46;
+}
+
+.heading_blue-pink h2 small {
+  color: #bb2525;
+}
+
+.heading_white h2 {
+  color: #ffffff;
+}
+
+.heading_white h2 small {
+  color: #ffffff;
+}
+
+.text_center {
+  text-align: center;
+}
+
 .sm {
   max-width: 75rem;
 }
@@ -104,16 +128,20 @@ ul {
   color: #999999;
 }
 
+.btn_maroon {
+  color: #bb2525;
+}
+
+.btn_border-maroon {
+  border-color: #bb2525;
+}
+
 .btn {
   text-transform: capitalize;
   padding: 0.75rem 1.5rem;
   border-radius: 2rem;
   color: white;
   border: 1px solid transparent;
-}
-
-.btn_border-maroon {
-  border-color: #bb2525;
 }
 
 header {
@@ -223,10 +251,6 @@ body {
 
 .info {
   background-color: #141e46;
-}
-
-.info .heading_sect {
-  text-align: center;
 }
 
 .info .info_content {
@@ -420,18 +444,6 @@ body {
   height: 0.5rem;
   border-radius: 50%;
   background-color: #cccccc;
-}
-
-.testimonial_sect .heading_sect {
-  text-align: center;
-}
-
-.testimonial_sect .heading_sect h2 {
-  color: #141e46;
-}
-
-.testimonial_sect .heading_sect small {
-  color: #bb2525;
 }
 
 .testimonial_slider-sect .testmonial_img {
@@ -729,7 +741,7 @@ body {
 }
 
 .our_works .our_work-card figure:after {
-  content: "01";
+  content: attr(data);
   color: #ffffff;
   text-align: center;
   line-height: 5rem;
@@ -769,6 +781,10 @@ body {
   right: 0;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
+}
+
+.about_us .heading_sect small {
+  font-size: 30%;
 }
 
 .about_us::after {

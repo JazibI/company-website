@@ -89,6 +89,35 @@ ul {
   }
 }
 
+.heading_blue{
+  h2{
+    color: $color-blue;
+  }
+}
+
+.heading_blue-pink{
+  h2{
+    color: $color-blue;
+    small{
+      color: $primary-maroon;
+    }
+  }
+}
+
+.heading_white{
+
+  h2{
+    color: $white;
+    small{
+      color: $white;
+    }
+  }
+}
+
+.text_center{
+  text-align: center;
+}
+
 .sm {
   max-width: 75rem;
 }
@@ -107,6 +136,15 @@ ul {
   color: lighten($color: $black, $amount: 60%);
 }
 
+.btn_maroon {
+  color: $primary-maroon;
+}
+
+.btn_border-maroon {
+  border-color: $primary-maroon;
+}
+
+
 .btn {
   text-transform: capitalize;
   padding: 0.75rem 1.5rem;
@@ -115,9 +153,6 @@ ul {
   border: 1px solid transparent;
 }
 
-.btn_border-maroon {
-  border-color: $primary-maroon;
-}
 
 //styling of header section
 
@@ -236,9 +271,7 @@ body {
 .info {
   background-color: $color-blue;
 
-  .heading_sect {
-    text-align: center;
-  }
+  
 
   .info_content {
     display: flex;
@@ -413,18 +446,7 @@ body {
 
 //styling of testimonial_sect
 
-.testimonial_sect {
-  .heading_sect {
-    text-align: center;
 
-    h2 {
-      color: $color-blue;
-    }
-    small {
-      color: $primary-maroon;
-    }
-  }
-}
 
 .testimonial_slider-sect {
   .testmonial_img {
@@ -715,7 +737,7 @@ body {
       position: relative;
 
       &:after {
-        content: "01";
+        content: attr(data);
         color: $white;
         text-align: center;
         line-height: 5rem;
@@ -762,6 +784,12 @@ body {
 //styling of about_us sect
 
 .about_us {
+  .heading_sect{
+    small{
+      font-size: 30%;
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -786,7 +814,6 @@ body {
     object-position: top center;
   }
 
-  
 }
 .about_us-inner {
   position: relative;
@@ -915,6 +942,11 @@ body {
     }
   }
 }
+
+
+//styling of portfolio section
+
+
 @media (max-width: 992px) {
   //styling of nav section
 
