@@ -19,10 +19,24 @@ window.addEventListener("scroll", function(){
 
 // styling of testimonial-slider section
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper("#mySwiper", {
     
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+  });
+
+
+  // styling of portfolio swiper 
+
+
+  var swiperA = new Swiper("#swiperA", {
+    slidesPerView: 5,
+    spaceBetween: 15,
+    loop: "true",
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
   });
