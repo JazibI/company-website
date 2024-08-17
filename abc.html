@@ -1,329 +1,80 @@
-<div class="testimonial_slider">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="swiper_card">
-            <article>
-              <figure>
-                <img
-                  loading="lazy"
-                  src="./img/client-a-o.png"
-                  alt=""
-                />
-              </figure>
-              <figcaption>
-                <h3>
-                  Lorem, ipsum dolor.
-                  <small>Lorem, ipsum.</small>
-                </h3>
-              </figcaption>
-            </article>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Picker Example</title>
+    <style>
+        .date_box {
+            position: relative;
+            display: inline-block;
+        }
 
-            <ul class="testimonial_star-ul d_flex-align">
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_gray">
-                <i class="bi bi-star-fill"></i>
-              </li>
-            </ul>
+        .date_box i {
+            position: absolute;
+            left: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #800000; /* Replace $primary-maroon with its hex value */
+            font-size: 1rem;
+            pointer-events: none;
+        }
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Commodi iure, repellat optio id doloremque cum minima
-              molestiae voluptates officiis ipsum.
-            </p>
-          </div>
-          <!-- /.swiper_card -->
-        </div>
+        .date_box input {
+            padding: 0.5rem 0.5rem 0.5rem 2rem;
+            width: 200px; /* Adjust as necessary */
+            box-sizing: border-box;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: #fff;
+        }
 
-        <div class="swiper-slide">
-          <div class="swiper_card">
-            <article>
-              <figure>
-                <img
-                  loading="lazy"
-                  src="./img/client-a-o.png"
-                  alt=""
-                />
-              </figure>
-              <figcaption>
-                <h3>
-                  Lorem, ipsum dolor.
-                  <small>Lorem, ipsum.</small>
-                </h3>
-              </figcaption>
-            </article>
+        .date_box input::-webkit-calendar-picker-indicator {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
 
-            <ul class="testimonial_star-ul d_flex-align">
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_gray">
-                <i class="bi bi-star-fill"></i>
-              </li>
-            </ul>
+    <div class="date_box ps_r">
+        <i class="bi bi-calendar-range-fill"></i>
+        <input id="dateInput" type="date" placeholder="select date">
+    </div><!-- /.date_box -->
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Commodi iure, repellat optio id doloremque cum minima
-              molestiae voluptates officiis ipsum.
-            </p>
-          </div>
-          <!-- /.swiper_card -->
-        </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let dateInput = document.getElementById("dateInput");
 
-        <div class="swiper-slide">
-          <div class="swiper_card">
-            <article>
-              <figure>
-                <img
-                  loading="lazy"
-                  src="./img/client-a-o.png"
-                  alt=""
-                />
-              </figure>
-              <figcaption>
-                <h3>
-                  Lorem, ipsum dolor.
-                  <small>Lorem, ipsum.</small>
-                </h3>
-              </figcaption>
-            </article>
+            // Event listener to focus and show the date picker
+            dateInput.addEventListener("click", function() {
+                if (typeof dateInput.showPicker === "function") {
+                    dateInput.showPicker(); // For modern browsers
+                } else {
+                    dateInput.focus(); // Fallback for older browsers
+                }
+            });
+        });
+    </script>
+</body>
+</html>
 
-            <ul class="testimonial_star-ul d_flex-align">
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_gray">
-                <i class="bi bi-star-fill"></i>
-              </li>
-            </ul>
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Commodi iure, repellat optio id doloremque cum minima
-              molestiae voluptates officiis ipsum.
-            </p>
-          </div>
-          <!-- /.swiper_card -->
-        </div>
 
-        <div class="swiper-slide">
-          <div class="swiper_card">
-            <article>
-              <figure>
-                <img
-                  loading="lazy"
-                  src="./img/client-a-o.png"
-                  alt=""
-                />
-              </figure>
-              <figcaption>
-                <h3>
-                  Lorem, ipsum dolor.
-                  <small>Lorem, ipsum.</small>
-                </h3>
-              </figcaption>
-            </article>
+<div class="video_sect-inner" id="videoSectHeight">
 
-            <ul class="testimonial_star-ul d_flex-align">
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_gray">
-                <i class="bi bi-star-fill"></i>
-              </li>
-            </ul>
+    <div class="container sm">
+      
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Commodi iure, repellat optio id doloremque cum minima
-              molestiae voluptates officiis ipsum.
-            </p>
-          </div>
-          <!-- /.swiper_card -->
-        </div>
+      <div class="intro_video">
+        <iframe
+          src="https://www.youtube.com/embed/WhY7uyc56ms?autoplay=1&mute=1&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&playlist=WhY7uyc56ms"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div><!-- /.intro_video -->
 
-        <div class="swiper-slide">
-          <div class="swiper_card">
-            <article>
-              <figure>
-                <img
-                  loading="lazy"
-                  src="./img/client-a-o.png"
-                  alt=""
-                />
-              </figure>
-              <figcaption>
-                <h3>
-                  Lorem, ipsum dolor.
-                  <small>Lorem, ipsum.</small>
-                </h3>
-              </figcaption>
-            </article>
 
-            <ul class="testimonial_star-ul d_flex-align">
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_gray">
-                <i class="bi bi-star-fill"></i>
-              </li>
-            </ul>
+    </div><!-- /.container -->
 
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Commodi iure, repellat optio id doloremque cum minima
-              molestiae voluptates officiis ipsum.
-            </p>
-          </div>
-          <!-- /.swiper_card -->
-        </div>
-
-        <div class="swiper-slide">
-          <div class="swiper_card">
-            <article>
-              <figure>
-                <img
-                  loading="lazy"
-                  src="./img/client-a-o.png"
-                  alt=""
-                />
-              </figure>
-              <figcaption>
-                <h3>
-                  Lorem, ipsum dolor.
-                  <small>Lorem, ipsum.</small>
-                </h3>
-              </figcaption>
-            </article>
-
-            <ul class="testimonial_star-ul d_flex-align">
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_gray">
-                <i class="bi bi-star-fill"></i>
-              </li>
-            </ul>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Commodi iure, repellat optio id doloremque cum minima
-              molestiae voluptates officiis ipsum.
-            </p>
-          </div>
-          <!-- /.swiper_card -->
-        </div>
-
-        <div class="swiper-slide">
-          <div class="swiper_card">
-            <article>
-              <figure>
-                <img
-                  loading="lazy"
-                  src="./img/client-a-o.png"
-                  alt=""
-                />
-              </figure>
-              <figcaption>
-                <h3>
-                  Lorem, ipsum dolor.
-                  <small>Lorem, ipsum.</small>
-                </h3>
-              </figcaption>
-            </article>
-
-            <ul class="testimonial_star-ul d_flex-align">
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_yellow">
-                <i class="bi bi-star-fill"></i>
-              </li>
-              <li class="color_gray">
-                <i class="bi bi-star-fill"></i>
-              </li>
-            </ul>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Commodi iure, repellat optio id doloremque cum minima
-              molestiae voluptates officiis ipsum.
-            </p>
-          </div>
-          <!-- /.swiper_card -->
-        </div>
-      </div>
-    </div>
-
-    <div class="testimonial_slider-btns">
-      <div class="swiper-button-next">
-        <i class="bi bi-arrow-right-short"></i>
-      </div>
-      <div class="swiper-button-prev">
-        <i class="bi bi-arrow-left-short"></i>
-      </div>
-    </div><!-- /.testimonial_slider-btns -->
-  </div><!-- /.testimonial_slider -->
+  </div><!-- /.video_sect-inner -->
