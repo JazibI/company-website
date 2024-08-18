@@ -2,6 +2,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
+input:focus-visible {
+  outline: 0;
+}
+
 .accordion-button:focus {
   -webkit-box-shadow: 0 0 0 0;
           box-shadow: 0 0 0 0;
@@ -859,6 +863,7 @@ body {
   width: 5rem;
   height: 5rem;
   background-color: #bb2525;
+  border-radius: 0.5rem;
 }
 
 .our_works .our_work-card figure img {
@@ -1176,7 +1181,7 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-top: 1.5rem;
+  margin: 1.5rem;
 }
 
 .award_winning-section:before {
@@ -1341,19 +1346,28 @@ footer .footer_list .list_heading i {
 footer .footer_icon-list li:not(:first-child) {
   color: rgba(255, 255, 255, 0.8);
   position: relative;
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
 }
 
 footer .footer_icon-list li:not(:first-child) strong {
-  font-size: calc(.8rem + .5vw);
+  font-size: calc(0.8rem + 0.5vw);
   text-transform: capitalize;
+}
+
+footer .footer_icon-list li:not(:first-child) strong i {
+  font-size: 1.25rem;
 }
 
 footer .footer_icon-list li:not(:first-child) strong small {
   display: block;
-  padding: .5rem 0 .5rem 1.5rem;
+  padding: 0.5rem 0 0.5rem 1rem;
   position: relative;
   font-weight: normal;
+  font-size: 80%;
+}
+
+footer .footer_icon-list li:not(:first-child) strong small::before {
+  font-size: 2rem;
 }
 
 footer .footer_icon-list li:not(:first-child) strong small a {
@@ -1382,6 +1396,7 @@ footer .footer_icon-list li:not(:first-child)::before {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #bb2525;
+  font-size: 2rem;
 }
 
 .footer_icon-list-a li:not(:first-child) {
@@ -1389,15 +1404,7 @@ footer .footer_icon-list li:not(:first-child)::before {
 }
 
 .footer_icon-list-a li:not(:first-child)::before {
-  content: "";
-}
-
-.footer_icon-list-a li:not(:first-child)::before {
   display: none;
-}
-
-.footer_icon-list-b li:not(:first-child) {
-  padding: 0.5rem 0 !important;
 }
 
 .footer_icon-list-b li:not(:first-child) strong {
@@ -1412,8 +1419,8 @@ footer .footer_icon-list li:not(:first-child)::before {
   -webkit-transform: translate(-0.35rem, 0.25rem);
           transform: translate(-0.35rem, 0.25rem);
   color: #bb2525;
-  font-size: .85rem;
-  margin-top: .5rem;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
 }
 
 .footer_icon-list-b li:not(:first-child) strong small {
@@ -1427,6 +1434,58 @@ footer .footer_icon-list li:not(:first-child)::before {
 
 .footer_icon-list-b li:not(:first-child)::before {
   display: none;
+}
+
+.footer_subsctibtion-sect {
+  background-color: #0e1632;
+  padding: 4rem 2rem;
+  border-radius: 1.5rem;
+  gap: 3rem;
+}
+
+.footer_subsctibtion-sect h2 {
+  max-width: 20rem;
+  text-transform: capitalize;
+  font-size: calc(1.5rem + 1vw);
+}
+
+.footer_subsctibtion-sect aside {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  gap: 1rem;
+}
+
+.footer_subsctibtion-sect aside input {
+  border: 1px solid #ffffff;
+  padding: 1rem;
+  max-width: 25rem;
+  border-radius: 2rem;
+  background-color: transparent;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: auto;
+}
+
+.footer_subsctibtion-sect aside input::-webkit-input-placeholder {
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.footer_subsctibtion-sect aside input:-ms-input-placeholder {
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.footer_subsctibtion-sect aside input::-ms-input-placeholder {
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.footer_subsctibtion-sect aside input::placeholder {
+  color: #ffffff;
+  text-transform: capitalize;
 }
 
 @media (max-width: 992px) {
@@ -1494,6 +1553,9 @@ footer .footer_icon-list li:not(:first-child)::before {
     -webkit-transform: translate(0, -50%) !important;
             transform: translate(0, -50%) !important;
   }
+  .news_sect:before {
+    width: 100%;
+  }
   .about_us-inner .about_us-figcaption,
   .about_us-inner .about_us-figure {
     -webkit-box-flex: 100%;
@@ -1551,6 +1613,27 @@ footer .footer_icon-list li:not(:first-child)::before {
   }
   .footer_inner::after {
     display: none !important;
+  }
+  .footer_subsctibtion-sect {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer_subsctibtion-sect aside {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+    justify-items: flex-start;
+  }
+  .footer_subsctibtion-sect aside input {
+    margin-left: unset;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 

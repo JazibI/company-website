@@ -15,6 +15,13 @@ input[type="date"] {
   &::-webkit-calendar-picker-indicator {
     display: none;
   }
+  
+}
+
+input{
+  &:focus-visible {
+    outline: 0;
+  }
 }
 
 .accordion-button:focus {
@@ -830,6 +837,7 @@ body {
         width: 5rem;
         height: 5rem;
         background-color: $primary-maroon;
+        border-radius: 0.5rem;
       }
 
       img {
@@ -1138,7 +1146,8 @@ body {
   padding: 1.5rem 2rem 1.5rem 2.5rem;
   border-radius: 1.75rem;
   width: fit-content;
-  margin-top: 1.5rem;
+  margin: 1.5rem;
+
   &:before {
     content: "";
     position: absolute;
@@ -1217,6 +1226,10 @@ body {
       border-radius: 0.25rem;
     }
   }
+
+  .container {
+    // margin-bottom: 2rem;
+  }
 }
 // styling of video_sect
 
@@ -1270,7 +1283,6 @@ footer {
   background-color: $color-blue;
 
   .footer_inner {
-
     .row [class^="col-"] {
       padding: 12px 24px;
     }
@@ -1284,42 +1296,45 @@ footer {
       background-color: $white;
       left: 0;
     }
-
-    
   }
 
   .footer_list {
-    
     .list_heading {
       text-transform: capitalize;
       margin: 1rem 0 3rem 0;
       i {
         margin-right: 1rem;
-        
       }
     }
   }
 
   .footer_icon-list {
     & li:not(:first-child) {
-      color:  rgba($color: $white, $alpha: .8);
+      color: rgba($color: $white, $alpha: 0.8);
       position: relative;
-      padding: .5rem 1.5rem;
+      padding: 0.5rem 1.5rem;
 
-      strong{
-        font-size: calc(.8rem + .5vw);
+      strong {
+        font-size: calc(0.8rem + 0.5vw);
         text-transform: capitalize;
-        small{
+        i {
+          font-size: 1.25rem;
+        }
+        small {
           display: block;
-          padding: .5rem 0 .5rem 1.5rem;
+          padding: 0.5rem 0 0.5rem 1rem;
           position: relative;
           font-weight: normal;
+          font-size: 80%;
 
-          a{
+          &::before {
+            font-size: 2rem;
+          }
+
+          a {
             display: inline-block;
             text-decoration: none;
             color: inherit;
-
           }
 
           &::before {
@@ -1331,7 +1346,6 @@ footer {
             transform: translate(-50%, -50%);
             color: $primary-maroon;
           }
-
         }
       }
 
@@ -1343,21 +1357,15 @@ footer {
         left: 0;
         transform: translate(-50%, -50%);
         color: $primary-maroon;
+        font-size: 2rem;
       }
     }
   }
-
-  
-
 }
 
-.footer_icon-list-a{
+.footer_icon-list-a {
   & li:not(:first-child) {
-    padding: .5rem 0!important;
-    &::before {
-      content: "";
-      
-    }
+    padding: 0.5rem 0 !important;
 
     &::before {
       display: none;
@@ -1365,34 +1373,63 @@ footer {
   }
 }
 
-.footer_icon-list-b{
+.footer_icon-list-b {
   & li:not(:first-child) {
-    padding: .5rem 0!important;
-
-    strong{
-      padding: .5rem 0 .5rem 1.5rem!important;
+    strong {
+      padding: 0.5rem 0 0.5rem 1.5rem !important;
       position: relative;
-      i{
+      i {
         position: absolute;
         top: 0;
         left: 0;
-        transform: translate(-.35rem, .25rem);
+        transform: translate(-0.35rem, 0.25rem);
         color: $primary-maroon;
-        font-size: .85rem;
-        margin-top: .5rem;
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
       }
-      small{
-        padding: .5rem 0 .5rem 0!important;
+      small {
+        padding: 0.5rem 0 0.5rem 0 !important;
         font-size: 70%;
         &::before {
-          content: ""!important;
+          content: "" !important;
         }
-
       }
     }
 
     &::before {
       display: none;
+    }
+  }
+}
+
+//styling of footer_subsctibtion-sect
+
+.footer_subsctibtion-sect {
+  background-color: darken($color: $color-blue, $amount: 5%);
+  padding: 4rem 2rem;
+  border-radius: 1.5rem;
+  gap: 3rem;
+  h2 {
+    max-width: 20rem;
+    text-transform: capitalize;
+    font-size: calc(1.5rem + 1vw);
+  }
+  aside {
+    flex: 1;
+    gap: 1rem;
+    input {
+      border: 1px solid $white;
+      padding: 1rem;
+      max-width: 25rem;
+      border-radius: 2rem;
+      background-color: transparent;
+      flex: 1;
+      margin-left: auto;
+
+      &::placeholder {
+        color: $white;
+        text-transform: capitalize;
+      }
     }
   }
 }
@@ -1485,6 +1522,14 @@ footer {
     }
   }
 
+  //styling of news_sect
+
+  .news_sect{
+    &:before{
+      width: 100%;
+    }
+  }
+
   //styling of .about_us section
 
   .about_us-inner {
@@ -1540,9 +1585,27 @@ footer {
   }
 
   .footer_inner {
-    &::after{
-      display: none!important;
+    &::after {
+      display: none !important;
     }
+  }
+
+  .footer_subsctibtion-sect {
+    flex-wrap: wrap;
+    
+    flex-direction: column;
+    
+    aside{
+      flex: 1;
+      width: 100%;
+      justify-items: flex-start;
+
+      input{
+        margin-left: unset;
+        flex: 1;
+      }
+    }
+    
   }
 }
 
