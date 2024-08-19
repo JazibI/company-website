@@ -305,6 +305,18 @@ body {
   background-color: $color-cream;
 
   .hero_inner {
+    &:before{
+      content: "";
+      position: absolute;
+      top: 3rem;
+      left: -14rem;
+      width: 9rem;
+      height: 9rem;
+      border-radius: 50%;
+      background: rgb(187,37,37);
+background: linear-gradient(173deg, rgba(187,37,37,0.2050070028011205) 0%, rgba(187,37,37,0.006127450980392135) 80%);
+
+    }
     padding: 2rem 0;
     figcaption,
     figure {
@@ -1434,6 +1446,12 @@ footer {
   }
 }
 
+.footer_end-strip{
+  p{
+    text-transform: capitalize;
+  }
+}
+
 @media (max-width: 992px) {
   //styling of nav section
 
@@ -1605,9 +1623,15 @@ footer {
         flex: 1;
       }
     }
+  }
+  .footer_end-strip{
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
     
   }
 }
+
 
 @media (max-width: 768px) {
   //styling of heading_sect
@@ -1646,6 +1670,10 @@ footer {
 
   .hero {
     .hero_inner {
+
+      &:before{
+        display: none;
+      }
       figcaption {
         width: 100%;
       }
